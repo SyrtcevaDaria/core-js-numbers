@@ -289,13 +289,13 @@ function getFibonacciNumber(index) {
 function getSumToN(n) {
   let res = 0;
   let index = 0;
-  while (true) {
-    if (index === n + 1) {
-      return res;
-    }
+  let i = 0;
+  while (i < n + 1) {
+    i += 1;
     res += index;
     index += 1;
   }
+  return res;
 }
 
 /**
@@ -340,7 +340,6 @@ function isPowerOfTwo(num) {
   }
   const s = num.toString(2);
   const array = s.slice(1).split('');
-  console.log(array);
   return s[0] === '1' && array.every((element) => element === '0');
 }
 
